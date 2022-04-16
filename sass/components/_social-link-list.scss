@@ -21,15 +21,11 @@
   fill: rgba(175, 177, 184, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.icons-team:hover,
-.icons-team:focus {
-  background-color: var(--accent);
-  fill: var(--font-color);
-}
-.icons-footer:hover,
-.icons-footer:focus {
-  background-color: var(--accent);
+  &:hover,
+  &:focus {
+    background-color: var(--accent);
+    fill: var(--font-color);
+  }
 }
 
 .icons-footer {
@@ -44,17 +40,22 @@
   background-color: rgba(68, 69, 78, 1);
   fill: #ffffff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--accent);
+  }
 }
 .icons-nav-footer {
   margin-left: 70px;
 }
-.list-icons-footer li:not(:last-child) {
-  margin-right: 10px;
-}
+
 .list-icons-footer {
   list-style: none;
   display: flex;
   padding-left: 0;
   margin-top: 20px;
   margin-bottom: 0;
+  & li:not(:last-child) {
+    margin-right: 10px;
+  }
 }

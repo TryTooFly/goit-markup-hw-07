@@ -13,9 +13,9 @@
   align-items: center;
   cursor: pointer;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-button:hover,
-.modal-button:focus {
-  fill: rgba(33, 150, 243, 1);
-  outline: none;
+  &:hover,
+  &:focus {
+    fill: rgba(33, 150, 243, 1);
+    outline: none;
+  }
 }

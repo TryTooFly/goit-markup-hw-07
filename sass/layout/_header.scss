@@ -2,57 +2,47 @@
   display: flex;
   align-items: center;
 }
-
-.site-nav a {
-  color: var(--primary-text-color);
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  padding-bottom: 32px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.site-nav a:hover,
-.site-nav a:focus {
-  color: var(--accent);
-}
-.site-nav .current {
-  color: var(--accent);
-  padding-bottom: 32px;
-}
 .current {
   position: relative;
-}
-.current::after {
-  content: "";
-  background-color: var(--accent);
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  bottom: 0;
-  left: 0;
-  border-radius: 2px;
+  &::after {
+    content: "";
+    background-color: var(--accent);
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+  }
+  .site-nav & {
+    color: var(--accent);
+    padding-bottom: 32px;
+  }
 }
 .site-nav {
   display: flex;
+  & a {
+    color: var(--primary-text-color);
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-bottom: 32px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: var(--accent);
+    }
+  }
 }
 
 .site-nav .item {
   margin-right: 50px;
   display: block;
-}
-.site-nav .item:last-child {
-  margin-right: 0;
-}
-.contacts-list a {
-  color: var(--secondary-text-color);
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .contacts-list {
@@ -63,6 +53,14 @@
   margin-top: 0;
   margin-bottom: 0;
   margin-left: auto;
+  & a {
+    color: var(--secondary-text-color);
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
 }
 .contacts-list .item + .item {
   margin-left: 50px;
@@ -71,12 +69,13 @@
   display: flex;
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent);
+    cursor: pointer;
+  }
 }
-.envelope:hover,
-.envelope:focus {
-  color: var(--accent);
-  cursor: pointer;
-}
+
 .envelope-icon {
   margin-right: 10px;
   fill: currentColor;
